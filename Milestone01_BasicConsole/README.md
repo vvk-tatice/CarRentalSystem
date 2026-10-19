@@ -1,6 +1,6 @@
 # Car Rental System
 
-A layered .NET application built as part of a multi-milestone backend development course.
+A layered .NET application built as part of a multi-milestone backend development course, transitioning from basic console workflows to professional ORM-managed relational databases.
 
 ---
 
@@ -8,6 +8,7 @@ A layered .NET application built as part of a multi-milestone backend developmen
 
 * **Milestone01_BasicConsole:** Procedural C# console application with basic JSON file persistence.
 * **Milestone02_OOP:** Refactored object-oriented console application using domain models, service layers, and JSON persistence.
+* **Milestone03_EFCore:** Modernized application utilizing Entity Framework Core (EF Core) and SQLite for robust relational database storage.
 
 ---
 
@@ -24,14 +25,20 @@ A layered .NET application built as part of a multi-milestone backend developmen
 - **Focus:** Refactoring procedural code into clean OOP principles and separating concerns into dedicated layers.
 - **Key Features:**
   - **Domain Models:** `Car`, `Customer`, and `Rental` classes with encapsulated properties and constructors.
-  - **Service Layer:** `CarRentalService` handles core business logic, entity management, and calculations.
+  - **Service Layer:** `CarRentalService` handles core business logic and calculations.
   - **Data Persistence:** Object serialization/deserialization with `System.Text.Json`.
-  - **Separation of Concerns:** Clear boundary between user interaction (`Program.cs`), business logic (`Services/`), and domain structures (`Models/`).
+
+### Milestone 03: Entity Framework Core & Relational Database
+- **Focus:** Transitioning from file storage to an Object-Relational Mapper (ORM) using EF Core and SQLite.
+- **Key Features:**
+  - **Database Context (`AppDbContext`):** Maps domain models directly to relational database tables using `DbSet<T>`.
+  - **LINQ Queries:** Replaced raw file reading/writing with robust, type-safe database queries.
+  - **Automatic Database Initialization:** Automatically provisions the local `carrental.db` database and seeds default data on startup.
 
 ---
 
 ## 🚀 How to Run
 
 1. Open `CarRentalSystem.sln` in **JetBrains Rider** or **Visual Studio**.
-2. Set `Milestone02_OOP` as the startup project.
+2. Set `Milestone03_EFCore` as the startup project.
 3. Build and Run (`Ctrl + F5` or `Cmd + R`).
